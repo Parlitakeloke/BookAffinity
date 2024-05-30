@@ -1,0 +1,21 @@
+footer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(253, 253, 253);
+    padding: 15px 0;
+}
+
+p {
+    width: 30%;
+}
+
+.footerLinea {
+    border-left: 1px solid black;
+    padding: 1px;
+    padding-top: 100px;
+}

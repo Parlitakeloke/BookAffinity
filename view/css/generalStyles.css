@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    margin: 0;
+    padding: 0;
+	font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 235, 235);
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #3386FF;
+    color: white;
+    border: 0;
+    border-radius: 2%;
+    cursor: pointer;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+.checked {
+    color: orange;
+}
+
+#addLibroModal {
+    display: none;
+	justify-content: center;
+	align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+}

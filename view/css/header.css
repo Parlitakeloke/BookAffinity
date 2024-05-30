@@ -1,0 +1,121 @@
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.2);
+    align-items: center;
+    justify-content: space-around;
+    z-index: 3;
+}
+
+#headerLogo {
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    height: 6vh;
+}
+
+#headerLogo img {
+    cursor: pointer;
+    width: 10vw;
+    height: 6vh;
+}
+
+#headerSearch {
+    display: flex;
+    width: 45%;
+    height: 70%;
+    justify-content: center;
+}
+
+#headerSearch * {
+    border-radius: 0px;
+    padding: 3%;
+}
+
+#headerSearch input {
+    width: 70%;
+    border: 0.5px solid gray;
+    border-radius: 3px 0px 0px 3px;
+}
+#buscador{
+    padding: 0%;
+}
+#headerSearch input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+#headerSearch input::content {
+    padding-left: 2%;
+}
+
+#headerSearch button {
+    width: 10%;
+    border: 0.5px solid gray;
+    border-left: 0px;
+    border-radius: 0px 3px 3px 0px;
+    cursor: pointer;
+}
+
+#headerNav {
+    display: flex;
+    width: 20%;
+    height: 90%;
+    justify-content: end;
+}
+
+#headerNav button {
+    width: 30%;
+    height: 100%;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+}
+
+#headerNav button img {
+    width: 3vw;
+    height: 5vh;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    #headerLogo img {
+        width: 15vw;
+        height: 5vh;
+    }
+    #headerNav {
+        width: 30%;
+    }
+
+    #headerNav button img {
+        width: 7vw;
+        height: 4vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #headerLogo img {
+        width: 15vw;
+        height: 3vh;
+    }
+
+    #headerSearch {
+        height: 50%;
+    }
+
+    #headerNav {
+        width: 30%;
+    }
+
+    #headerNav button img {
+        width: 7vw;
+        height: 4vh;
+    }
+}

@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | JLCLUB</title>
+    <link rel="stylesheet" href="./view/css/generalStyles.css">
+    <link rel="stylesheet" href="./view/css/loginRegistro.css">
+
+    <script src="https://kit.fontawesome.com/9d49876e0a.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Erregistratu</h1>
+                <div class="button-container">
+                    <button id="typeIrakaslea" value="formIkaslea">Ikaslea</button>
+                    <button id="typeIkaslea" value="formIrakaslea">Irakaslea</button>
+                </div>
+                <p id="msgErrorRegister" class="warn"></p>
+
+                <div id="formIrakaslea" class="signUpForm" hidden>
+
+                    <div class="twoInputRow">
+                        <input type="text" name="nombreIrakaslea" placeholder="Izena *" id="nombreIrakaslea"/>
+                        <input type="text" name="apellidosIrakaslea" placeholder="Abizenak *" id="apellidosIrakaslea"/>
+                    </div>
+                    
+                    <div class="twoInputRow">
+                        <input type="text" name="usuarioIrakaslea" placeholder="Erabiltzailea *" id="usuarioIrakaslea"/>
+                        <input type="text" name="telefonoIrakaslea" placeholder="Telefonoa" id="telefonoIrakaslea"/>
+                    </div> 
+                    <input type="password" name="contraseinaIrakaslea" placeholder="Pasahitza *" id="contraseinaIrakaslea"/>
+                    <input type="password" name="contraseina2Irakaslea" placeholder="Errepikatu pasahitza *" id="contraseina2Irakaslea"/>
+                    <input type="email" name="emailIrakaslea" placeholder="Helbide elektronikoa *" id="emailIrakaslea"/>
+                    <input type="file" placeholder="Argazkia" id="fotoIrakaslea" name="fotoIrakaslea" accept="image/png, image/jpeg, image/jpg" >
+                    <div class="twoInputRow">
+                        <input type="date" placeholder="Jaiotze data: (aaaa/mm/dd) *" id="nacimientoIrakaslea" name="nacimientoIrakaslea">
+                        <input type="text" name="institutoIrakaslea" placeholder="Ikastetzea *" id="institutoIrakaslea"/>
+                    </div>
+
+                    <p>Erantzunkisuna sinatu:<input type="checkbox" name="terminos" class="terminos" id="terminosIrakaslea" value="aceptado"></p>
+                    <button type="button" id="btnIrakaslea">Sartu</button>
+                </div>
+                <div id="formIkaslea" class="signUpForm" >
+                    <div class="twoInputRow">
+                        <input type="text" name="nombreIkaslea" placeholder="Izena *" id="nombreIkaslea"/>
+                        <input type="text" name="apellidosIkaslea" placeholder="Abizenak *" id="apellidosIkaslea"/>
+                    </div>
+                    <div class="twoInputRow">
+                        <input type="text" name="usuarioIkaslea" placeholder="Erabiltzailea *" id="usuarioIkaslea"/>
+                        <input type="text" name="telefonoIkaslea" placeholder="Telefonoa *" id="telefonoIkaslea"/>
+                    </div>
+                    <input type="email" name="emailIkaslea" placeholder="Helbide elektronikoa *" id="emailIkaslea"/>
+                    <input type="password" name="contraseinaIkaslea" placeholder="Pasahitza *" id="contraseinaIkaslea"/>
+                    <input type="password" name="contraseina2Ikaslea" placeholder="Errepikatu pasahitza *" id="contraseina2Ikaslea"/>
+                    <input type="file" placeholder="Argazkia" id="fotoIkaslea" name="fotoIkaslea"  accept="image/png, image/jpeg, image/jpg">
+                    <div class="twoInputRow">
+                        <input type="date" placeholder="Jaiotze data: (aaaa/mm/dd) *" id="nacimientoIkaslea" name="nacimientoIkaslea">
+                        <input type="text" name="institutoIkaslea" placeholder="Ikastetzea *" id="institutoIkaslea"/>
+                    </div>
+                    <div class="twoInputRow">
+                        <input type="text" name="cursoIkaslea" placeholder="Maila *" id="cursoIkaslea"/>
+                        <input type="text" name="ainoIkaslea" placeholder="Ikasturtea *" id="ainoIkaslea"/>
+                        <input type="text" name="codigoIkaslea" placeholder="Taldearen kodea *" id="codigoIkaslea"/>
+                    </div>
+                    
+                    <p>Erantzunkisuna sinatu:<input type="checkbox" name="terminos" class="terminos" id="terminosIkaslea" value="aceptado"></p>
+                    <button type="button"  id="btnIkaslea" >Sartu</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-container sign-in-container" >
+            <form action="#">
+                <h1>Saioa hasi</h1>
+                <p id="msgError" class="warn"></p>
+                <input type="text" placeholder="Erabiltzailea" id="usuarioLogin" />
+                <input type="password" placeholder="Pasahitza" id="contraseinaLogin"/>
+                <a href="#">Pasahitza ahaztu duzu?</a>
+                <button type="button" id="login">Sartu</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Kaixo, aspaldiko!</h1>
+                    <p>Sartu zure erabiltzaile eta pasahitza webguean sartzeko.</p>
+                    <button type="button" class="ghost" id="signIn">Saioa hasi</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Kaixo, ongi etorri!</h1>
+                    <p>Sartu zure datuak webgunetik nabigatzeko.</p>
+                    <button type="button" class="ghost" id="signUp">Erregistratu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./view/js/generalScripts.js"></script>
+    <script src="./view/js/loginRegistro.js"></script>
+</body>
+</html>

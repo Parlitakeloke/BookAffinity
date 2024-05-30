@@ -1,0 +1,467 @@
+#containerSnap {
+    width: 100%;
+    height: 92vh;
+    margin-top: 8vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+#containerSnap section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    background-color: rgb(235, 235, 235);
+}
+
+#containerFicha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#ficha  {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    margin-top: 1%;
+    align-items: center;
+}
+
+#ficha img {
+    width: 30%;
+    height: 90%;
+    margin-left: 2%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#libro {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    width: 68%;
+    height: 90%;
+}
+
+#libro * {
+    width: 85%;
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+}
+
+.titulo {
+    font-size: 3em;
+    width: fit-content;
+}
+
+#titulo .estrellas {
+    display: flex;
+    width: fit-content;
+}
+
+#navegar {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 6%;
+    margin: 0 auto;
+    text-transform: unset;
+}
+
+#containerReviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 92%;
+    height: 92%;
+    margin: 4%;
+}
+
+#headerReview {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 10%;
+}
+
+#headerReview  h1 {
+    font-size: 3em;
+    width: fit-content;
+}
+
+#score {
+    display: flex;
+    align-items: center;
+}
+
+#score h1 {
+    color: orange;
+}
+
+#score .estrellas {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 6%;
+    margin-left: 1%;
+}
+
+#score p {
+    color: gray;
+    margin-left: 2%;
+}
+
+#newReview {
+    display: flex;
+    justify-content: flex-end;
+    width: 12%;
+    height: 10%;
+}
+
+#gehitu {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+#gehitu b {
+    cursor: pointer;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    margin-top: 5%;
+    overflow-y: scroll;
+}
+
+.review {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin-bottom: 2.5%;
+    padding: 1%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.review .perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.review .info {
+    width: 90%;
+    height: 100%;
+}
+
+.info p {
+    width: 100%;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.info * {
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+}
+
+.info .erantzuna {
+    align-self: flex-end;
+    float: right;
+    bottom: 1%;
+    margin-top: 2%;
+}
+
+.buttonMostrarRespuestas {
+    cursor: pointer;
+    max-width: 205px;
+}
+
+.cajaRespuestas {
+    display: none;
+}
+
+.cajaRespuesta {
+    display: flex;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.cajaRespuesta img {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.respuestaTexto {
+    margin-left: 8px;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #3386FF;
+	background-color: #3386FF;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+/* MODAL CSS */
+#modalBackground {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+}
+
+.modalContainer {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+}
+
+.modalContainer .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-top: 10px solid #58abb7;
+    width: 60%;
+    border-radius: 20px;
+}
+
+.modalContainer .closeModal {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modalContainer .closeModal:hover,
+.modalContainer .closeModal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalComentario {
+    display: none;
+}
+
+#modalRespuesta {
+    display: none;
+}
+
+#mensajeErrorComentarioP {
+    display: none;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+#mensajeErrorComentario {
+    color: red;
+    animation-name: animationBigSmall;
+    animation-duration: 0.25s;
+}
+
+.modalContainer #estrellas {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    width: 100%;
+    height: 32px;
+    margin-top: 10px;
+}
+
+.modalContainer #estrellas * {
+    color: #b1b1b1;
+}
+
+.modalContainer #estrellas:not(:checked) input {
+    position:absolute;
+    top:-9999px;
+}
+
+.modalContainer #estrellas input:checked ~ label {
+    color: #3386FF;    
+}
+
+.modalContainer #estrellas:not(:checked) label:hover,.modalContainer  #estrellas:not(:checked) label:hover ~ label {
+    color: #3386FF;  
+}
+
+.modalContainer #estrellas input:checked + label:hover, .modalContainer #estrellas input:checked + label:hover ~ label, .modalContainer #estrellas input:checked ~ label:hover,.modalContainer #estrellas input:checked ~ label:hover ~ label, 
+.modalContainer #estrellas label:hover ~ input:checked ~ label {
+    color: #3386FF;
+}
+
+#obligatorioEstrellas {
+    color: black;
+    margin-left: 185px;
+    margin-bottom: -5px;
+}
+
+#idioma {
+    margin-top: 10px;
+}
+
+#comentario {
+    margin-top: 10px;
+}
+
+#comentarioVal {
+    width: 60%;
+    height: 120px;
+}
+
+#tituloAlt {
+    margin-top: 10px;
+}
+
+#valorar {
+    margin-top: 15px;
+}
+
+#comentarioRespuesta {
+    width: 95%;
+    max-height: 25vh;
+    overflow-y: scroll;
+}
+
+#respuestaVal {
+    width: 60%;
+    height: 120px;
+}
+
+#mensajeErrorRespuestaP {
+    display: none;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+#mensajeErrorRespuesta {
+    color: red;
+    animation-name: animationBigSmall;
+    animation-duration: 0.25s;
+}
+
+@keyframes animationBigSmall {
+    50%  {color:red; font-size: 1.25em}
+}
+
+@media screen and (max-width: 800px) {
+    #ficha img {
+        width: 40%;
+        height: 70%;
+        align-self: start;
+        margin-top: 6%;
+    }
+
+    #sinopsis {
+        height: 40%;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #containerSnap {
+        height: unset;    
+    }
+
+    #ficha {
+        display: block;
+        text-align: center;
+    }
+
+    #ficha img {
+    margin: auto;
+    width: 60%;
+    }
+    
+    #libro {
+        margin: auto;
+    }
+
+    #libro * {
+        width: 100%;
+    }
+
+    #titulo {
+        display: block;
+    }
+
+    .titulo {
+        margin: 0 auto;
+    }
+    
+    #titulo .estrellas {
+        margin: auto;
+    }
+
+    #navegar {
+        display: none;
+    }
+
+    #newReview {
+        width: 20%;
+    }
+
+    .autor {
+        margin: auto;
+    }
+    
+    #score {
+        margin: auto;
+        width: 70%;
+    }
+
+    .review {
+        width: 90%;
+    }
+
+    .comentario {
+        padding-right: 2%;
+    }
+
+    .respuestaTexto {
+        width: 90%;
+    }
+}

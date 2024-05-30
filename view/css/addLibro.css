@@ -1,0 +1,68 @@
+#libroForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 40vw;
+	height: 65vh;
+	gap: 3%;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	transform: translateY(-30%);
+	border-radius: 20px;
+}
+
+#libroForm aside {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 15%;
+	padding: 10px;
+	background: #3386FF;
+	color: #fff;
+	border-radius: 20px 20px 0 0;
+}
+
+#libroForm aside h1 {
+	margin: 0 0 0 5%;
+}
+
+#libroForm section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4%;
+	width: 100%;
+	height: 55%;
+	box-sizing: border-box;
+}
+
+#libroForm section input[type='text'], input[type='file'], textarea, #idiomaModal {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 40%;
+	height: 15%;
+}
+
+#libroForm #msgError {
+	color: red;
+	text-align: center;
+	font-size: small;
+	height: 5%;
+}
+
+#libroForm #confirmarLibroModal {
+	width: 20%;
+	height: 10%;
+	border-radius: 20px;
+}
+
+
+
+
+
+
+
